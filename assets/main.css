@@ -801,9 +801,9 @@ select {
   font-weight: 600;
 }
 
-.text-green-100 {
+.text-green-400 {
   --tw-text-opacity: 1;
-  color: rgb(220 252 231 / var(--tw-text-opacity));
+  color: rgb(74 222 128 / var(--tw-text-opacity));
 }
 
 .text-green-500 {
