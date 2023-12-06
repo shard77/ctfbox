@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <link href="/assets/main.css" rel="stylesheet" />
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+    <script src="/js/htmx.min.js"></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+<div id="content">
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "ctfbox",
+  "version": "1.0.0",
+  "license": "ISC",
+  "scripts": {
+    "format": "prettier --write --ignore-unknown ."
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "prettier-plugin-tailwindcss": "^0.5.8",
+    "tailwindcss": "^3.3.6"
+  }
+}
