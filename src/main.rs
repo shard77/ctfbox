@@ -20,7 +20,8 @@ async fn main() {
         )
         .with(tracing_subscriber::fmt::layer())
         .init();
- 
+
+
     info!("initializing router...");
 
     let api_router = Router::new().route("/login", get(login_server));

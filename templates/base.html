@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <link href="/assets/main.css" rel="stylesheet" />
+    <link href="/assets/main.css" rel="stylesheet"/>
     <title>{% block title %}{{ title }}{% endblock %}</title>
-    <script src="/js/htmx.min.js"></script>
+    <script src="/assets/js/htmx.min.js"></script>
     {% block head %}{% endblock %}
 </head>
-<body>
+<body class="bg-green">
 <div id="content">
     {% block content %}{% endblock %}
 </div>
