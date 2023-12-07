@@ -1,14 +1,14 @@
-const { fontFamily } = require('tailwindcss/defaultTheme');
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['./templates/*.html', './templates/*/*.html'],
+  content: ["./templates/*.html", "./templates/*/*.html"],
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Source Code Pro', ...fontFamily.sans],
+        sans: ["Source Code Pro", ...fontFamily.sans],
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require("@tailwindcss/forms")],
 };
