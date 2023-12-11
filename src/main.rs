@@ -9,6 +9,7 @@ use serde::Deserialize;
 use tower_http::services::ServeDir;
 use tracing::info;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
+use validators::prelude::*;
 
 #[tokio::main]
 async fn main() {
