@@ -39,7 +39,7 @@ async fn main() {
 }
 
 #[derive(Template)]
-#[template(path = "pages/auth/login.html")]
+#[template(path = "pages/auth/login.html", print = "all")]
 struct LoginTemplate {
     error_message: Option<String>,
     username: Option<String>,
@@ -94,15 +94,24 @@ async fn register() -> impl IntoResponse {
 
 async fn login_server(Form(login_data): Form<LoginForm>) -> impl IntoResponse {
     info!("Received login: {:?}", login_data);
-    if login_data.username.is_empty() || login_data.password.is_empty() {
+
+    let input_username = login_data.username.trim();
+    let input_password = login_data.password.trim();
+
+    let error_message = if input_username.is_empty() {
+        "Username is empty"
+    } else if input_password.is_empty() {
+        "Password is empty"
+    } else {
+
         return LoginTemplate {
-            error_message: Some("Username or password is empty".to_string()),
+            error_message: None,
             username: Some(login_data.username),
         }.into_response();
-    }
+    };
 
     LoginTemplate {
-        error_message: None,
+        error_message: Some(error_message.to_string()),
         username: Some(login_data.username),
     }.into_response()
 }
