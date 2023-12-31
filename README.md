@@ -1,2 +1,2 @@
 # CTFBox
-CTFBox is a secure, fast and efficient CTF Buddy.
+CTFBox is a secure, fast and efficient CTF Buddy. (WIP)
