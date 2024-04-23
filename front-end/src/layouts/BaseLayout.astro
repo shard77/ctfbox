@@ -1,4 +1,5 @@
 ---
+import { AstroFont } from "astro-font";
 import NavBar from "@/components/react/Navbar";
 import "@/styles/custom.scss";
 import "@/styles/tailwind.css";
@@ -13,6 +14,28 @@ import "@/styles/tailwind.css";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Index</title>
+		<AstroFont
+			config={[
+				{
+					src: [],
+					preload: false,
+					display: "swap",
+					name: "Jersey_25",
+					fallback: "sans-serif",
+					selector: ".font-jersey",
+					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Jersey+25',
+				},
+				{
+					src: [],
+					preload: false,
+					display: "swap",
+					name: "Micro_5",
+					fallback: "sans-serif",
+					selector: ".font-micro",
+					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Micro+5',
+				},
+			]}
+		/>
 	</head>
 	<body class="min-h-screen background text-neutral-400">
 		<NavBar />
