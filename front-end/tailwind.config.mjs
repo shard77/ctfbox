@@ -7,14 +7,6 @@ export default {
 		'./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}',
 		'./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
 	],
-	theme: {
-		extend: {
-			fontFamily: {
-				jersey: ["Jersey 25", "sans-serif"],
-				micro: ["Micro 5", "sans-serif"],
-			}
-		},
-	},
 	darkMode: "class",
 	plugins: [
 		nextui({
