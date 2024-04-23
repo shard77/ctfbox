@@ -1,2 +1,4 @@
 /back-end/target
+/front-end/node_modules
 .devenv
+
