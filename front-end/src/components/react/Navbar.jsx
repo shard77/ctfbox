@@ -12,17 +12,17 @@ export default function NavBar() {
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
                 <NavbarItem>
                     <Link color="foreground" href="#">
-                        Features
+                        Home
                     </Link>
                 </NavbarItem>
                 <NavbarItem isActive>
                     <Link href="#" aria-current="page" color="secondary">
-                        Customers
+                        CTF Repository
                     </Link>
                 </NavbarItem>
                 <NavbarItem>
                     <Link color="foreground" href="#">
-                        Integrations
+                        Leaderboard
                     </Link>
                 </NavbarItem>
             </NavbarContent>

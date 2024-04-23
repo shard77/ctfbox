@@ -1,0 +1,19 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import DividerComponent from "@/components/react/Divider";
+---
+
+<BaseLayout>
+    <main
+        class="mx-auto flex min-h-screen max-w-[960px] flex-col gap-4 md:py-16"
+    >
+        <h1 class="text-3xl foreground font-micro">
+            Welcome to the CTF Repository!
+        </h1>
+        <p class="text-xl foreground font-micro">
+            You can find all sorts of things related to CTFs here, including
+            writeups, upcoming CTFs and others!
+        </p>
+        <DividerComponent />
+    </main>
+</BaseLayout>
