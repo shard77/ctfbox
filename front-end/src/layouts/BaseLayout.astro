@@ -23,7 +23,8 @@ import "@/styles/tailwind.css";
 					name: "Jersey_25",
 					fallback: "sans-serif",
 					selector: ".font-jersey",
-					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Jersey+25',
+					googleFontsURL:
+						"https://fonts.googleapis.com/css2?family=Jersey+25",
 				},
 				{
 					src: [],
@@ -32,13 +33,14 @@ import "@/styles/tailwind.css";
 					name: "Micro_5",
 					fallback: "sans-serif",
 					selector: ".font-micro",
-					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Micro+5',
+					googleFontsURL:
+						"https://fonts.googleapis.com/css2?family=Micro+5",
 				},
 			]}
 		/>
 	</head>
 	<body class="min-h-screen background text-neutral-400">
-		<NavBar />
+		<NavBar client:only="react" />
 		<slot />
 	</body>
 </html>

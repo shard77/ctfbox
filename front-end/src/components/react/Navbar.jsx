@@ -1,27 +1,39 @@
+import Reeact, { useState, useEffect } from "react";
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, DropdownItem, DropdownTrigger, Dropdown, DropdownMenu, Avatar } from "@nextui-org/react";
-import { Logo } from "./Logo.jsx";
 
 export default function NavBar() {
+    const [activeRoute, setActiveRoute] = useState(window.location.pathname);
+
+    useEffect(() => {
+        const handleRouteChange = () => {
+            setActiveRoute(window.location.pathname);
+        };
+
+        window.addEventListener("popstate", handleRouteChange);
+
+        return () => {
+            windows.removeEventListener("popstate", handleRouteChange);
+        };
+    }, []);
     return (
         <Navbar className="bg-transparent">
             <NavbarBrand>
-                <Logo />
-                <p className="font-bold text-inherit">ACME</p>
+                <p className="font-jersey text-2xl">CTFBox</p>
             </NavbarBrand>
 
             <NavbarContent className="hidden sm:flex gap-4" justify="center">
-                <NavbarItem>
-                    <Link color="foreground" href="#">
+                <NavbarItem isActive={activeRoute === "/"}>
+                    <Link color={activeRoute === "/" ? "secondary" : "foreground"} href="/" aria-current={activeRoute === "/" ? "page" : undefined}>
                         Home
                     </Link>
                 </NavbarItem>
-                <NavbarItem isActive>
-                    <Link href="#" aria-current="page" color="secondary">
+                <NavbarItem isActive={activeRoute === "leaderboard"}>
+                    <Link color={activeRoute === "/ctf-repository" ? "secondary" : "foreground"} href="/ctf-repository" aria-current={activeRoute === "/ctf-repository" ? "page" : undefined}>
                         CTF Repository
                     </Link>
                 </NavbarItem>
-                <NavbarItem>
-                    <Link color="foreground" href="#">
+                <NavbarItem isActive={activeRoute === "leaderboard"}>
+                    <Link color={activeRoute === "/leaderboard" ? "secondary" : "foreground"} href="/leaderboard" aria-current={activeRoute === "/leaderboard" ? "page" : undefined}>
                         Leaderboard
                     </Link>
                 </NavbarItem>
@@ -37,7 +49,7 @@ export default function NavBar() {
                             color="secondary"
                             name="Jason Hughes"
                             size="sm"
-                            src="https://i.pravatar.cc/150?u=a042581f4e29026704d"
+                            src="/images/default-user-icon.jpg"
                         />
                     </DropdownTrigger>
                     <DropdownMenu aria-label="Profile Actions" variant="flat">
