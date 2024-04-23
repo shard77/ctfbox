@@ -11,6 +11,7 @@ export default {
 		extend: {
 			fontFamily: {
 				jersey: ["Jersey 25", "sans-serif"],
+				micro: ["Micro 5", "sans-serif"],
 			}
 		},
 	},
